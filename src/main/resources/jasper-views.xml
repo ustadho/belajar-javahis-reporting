@@ -15,4 +15,7 @@
     <bean id="test-print/export" class="org.springframework.web.servlet.view.jasperreports.JasperReportsMultiFormatView"
         p:url="/WEB-INF/templates/jrxml/reportAnggota.jrxml"/>
     
+    <bean id="report/opd/reg" class="org.springframework.web.servlet.view.jasperreports.JasperReportsMultiFormatView"
+        p:url="/WEB-INF/templates/jrxml/reg-per-dokter.jrxml"/>
+    
 </beans>

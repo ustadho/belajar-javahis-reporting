@@ -23,5 +23,9 @@ public class ReportingServiceImpl implements ReportingService{
     public Object testData() {
         return regDao.testData();
     }
+
+    public Object regList(String tanggal1, String tanggal2, String unit) {
+        return regDao.kunjunganUnit(tanggal1, tanggal2, unit);
+    }
     
 }

@@ -12,4 +12,5 @@ package com.javahis.reporting.service;
  */
 public interface ReportingService {
     public Object testData();
+    public Object regList(String tanggal1, String tanggal2, String unit);
 }

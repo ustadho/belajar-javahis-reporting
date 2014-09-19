@@ -6,7 +6,7 @@
             <div class="col-sm-3">
                 <p class="input-group">
                     <input type="text" class="form-control" datepicker-popup="dd-MM-yyyy" 
-                           ng-model="param.tanggal1" is-open="dpStartOpened" name="txtStartDate"
+                           ng-model="tanggal1" is-open="dpStartOpened" name="txtStartDate"
                            datepicker-options="dateOptions" close-text="Close" id="txtStartDate" 
                            required/>
                     <span class="input-group-btn">
@@ -23,7 +23,7 @@
             <div class="col-sm-3">
                 <p class="input-group">
                     <input type="text" class="form-control" datepicker-popup="dd-MM-yyyy" 
-                           ng-model="param.tanggal2" is-open="dpEndOpened" name="txtEndDate"
+                           ng-model="tanggal2" is-open="dpEndOpened" name="txtEndDate"
                            datepicker-options="dateOptions" close-text="Close" id="txtEndDate" 
                            required/>
                     <span class="input-group-btn">
@@ -35,26 +35,27 @@
                 </span>
             </div>
         </div>
-        <button type="submit" class="btn btn-default" ng-click="print()">Submit</button>
-        <button type="submit" class="btn btn-default" ng-click="getJson()">GET TEST</button>
+        <button type="button" class="btn btn-default" ng-click="print()">Print</button>
+        <button type="button" class="btn btn-default" ng-click="testData()">Get Report</button>
         
-        <p></p>
-        <table class="tab table-striped table-bordered">
-            <thead>
-                <tr>
-                    <th>NOrm</th>
-                    <th>Nama</th>
-                    <th>Tgl Lahir</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="p in pasien">
-                    <td>{{p.norm}}</td>
-                    <td>{{p.nama}}</td>
-                    <td>{{p.tgl_lahir}}</td>
-                </tr>
-            </tbody>
-        </table>
-
     </form>
+    <table border="0">
+        <thead>
+            <tr>
+                <th>Tgl Masuk</th>
+                <th>No. Reg</th>
+                <th>Pasien</th>
+                <th>Dokter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="r in pasien">
+                <td>{{r.tgl_masuk}}</td>
+                <td>{{r.no_reg}}</td>
+                <td>{{r.pasien}}</td>
+                <td>{{r.dokter}}</td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>
