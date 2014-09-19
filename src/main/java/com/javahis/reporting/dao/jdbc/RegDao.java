@@ -19,6 +19,7 @@ public class RegDao {
     MapResultSet mr;
     
     public Object testData(){
-        return mr.mapList("select norm, nama from rm_pasien limit 1");
+        return mr.mapList("select norm, nama, tgl_lahir, alamat_domisili "
+                + "from rm_pasien limit 100");
     }
 }
